@@ -21,7 +21,8 @@ IUSE="debug"
 RDEPEND="net-im/qutim:${SLOT}"
 
 DEPEND="${RDEPEND}
-	>=dev-util/cmake-2.6"
+	>=dev-util/cmake-2.6
+	>=x11-libs/qt-declarative-4.7.0"
 
 RESTRICT="debug? ( strip )"
 
