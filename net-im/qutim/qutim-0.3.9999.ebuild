@@ -21,7 +21,7 @@ KEYWORDS=""
 PROTOCOLS="+icq irc +jabber libpurple mrim vkontakte"
 PLUGINS="aescrypto antiboss antispam aspeller awn clconf connectionmanager +dbus \
 	histman hunspeller indicator kde massmessaging nowplaying phonon +kineticpopups \
-	+unreadmessageskeeper urlpreview weather yandexnarod sdl +webkit"
+	+unreadmessageskeeper urlpreview weather yandexnarod sdl +webkit kineticscroller"
 	#imagepub otr plugman sqlhistory tex vsqlhistory webhistory
 IUSE="debug doc linguas_bg linguas_cs linguas_de linguas_ru linguas_uk"
 IUSE="${PROTOCOLS} ${PLUGINS} ${IUSE} static mobile"
@@ -85,14 +85,17 @@ src_prepare() {
 	if !(use webkit) ; then
 		mycmakeargs+=(-DWEBKITCHAT=0)
 	fi
+	if !(use kineticscroller) ; then
+		mycmakeargs+=(-DKINETICSCROLLER=0)
+	fi
 	if (use static) ; then
 		mycmakeargs+=(-DQUTIM_BASE_LIBRARY_TYPE=STATIC)
 	fi
 	if (use mobile) ; then
 		mycmakeargs+=(-DMOBILESETTINGSDIALOG=1)
 	else
-		mycmakeargs+=(-DSTACKEDCHATFORM=0 -DMOBILECONTACTINFO=0 
-					  -DMOBILEABOUT=0 -DMOBILESETTINGSDIALOG=0)
+		mycmakeargs+=(-DSTACKEDCHATFORM=0 -DMOBILECONTACTINFO=0
+				-DMOBILEABOUT=0 -DMOBILESETTINGSDIALOG=0 -DSOFTKEYSACTIONBOX=0)
 	fi
 
 	## slotting... ##
