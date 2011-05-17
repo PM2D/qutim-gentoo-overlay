@@ -1,0 +1,22 @@
+>=x11-libs/qt-gui-4.6.0 webkit? ( >=x11-libs/qt-webkit-4.6.0 ) >=x11-libs/qt-multimedia-4.6.0 phonon? ( kde-base/phonon-kde ) >=dev-util/cmake-2.6.0 doc? ( app-doc/doxygen ) >=dev-vcs/git-1.6 >=dev-util/cmake-2.8.1 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+>=x11-libs/qt-gui-4.6.0 webkit? ( >=x11-libs/qt-webkit-4.6.0 ) >=x11-libs/qt-multimedia-4.6.0 phonon? ( kde-base/phonon-kde )
+0.3-live
+
+debug? ( strip )
+http://qutim.org
+GPL-2
+Multiprotocol instant messenger
+
+base cmake-utils confutils eutils flag-o-matic git multilib portability toolchain-funcs
++icq irc +jabber libpurple mrim vkontakte aescrypto antiboss antispam aspeller awn clconf connectionmanager +dbus histman hunspeller indicator kde massmessaging nowplaying phonon +kineticpopups +unreadmessageskeeper urlpreview weather yandexnarod sdl +webkit kineticscroller debug doc linguas_bg linguas_cs linguas_de linguas_ru linguas_uk static mobile
+
+linguas_bg? ( net-im/qutim-l10n:0.3-live[linguas_bg?] ) linguas_cs? ( net-im/qutim-l10n:0.3-live[linguas_cs?] ) linguas_de? ( net-im/qutim-l10n:0.3-live[linguas_de?] ) linguas_ru? ( net-im/qutim-l10n:0.3-live[linguas_ru?] ) linguas_uk? ( net-im/qutim-l10n:0.3-live[linguas_uk?] ) icq? ( x11-plugins/qutim-icq:0.3-live ) irc? ( x11-plugins/qutim-irc:0.3-live ) jabber? ( x11-plugins/qutim-jabber:0.3-live ) libpurple? ( x11-plugins/qutim-quetzal:0.3-live ) mrim? ( x11-plugins/qutim-mrim:0.3-live ) vkontakte? ( x11-plugins/qutim-vkontakte:0.3-live ) kde? ( kde-misc/qutim-kdeintegration:0.3-live ) aescrypto? ( x11-plugins/qutim-aescrypto:0.3-live ) antiboss? ( x11-plugins/qutim-antiboss:0.3-live ) antispam? ( x11-plugins/qutim-antispam:0.3-live ) aspeller? ( x11-plugins/qutim-aspeller:0.3-live ) awn? ( x11-plugins/qutim-awn:0.3-live ) clconf? ( x11-plugins/qutim-clconf:0.3-live ) connectionmanager? ( x11-plugins/qutim-connectionmanager:0.3-live ) dbus? ( x11-plugins/qutim-dbusapi:0.3-live ) histman? ( x11-plugins/qutim-histman:0.3-live ) hunspeller? ( x11-plugins/qutim-hunspeller:0.3-live ) indicator? ( x11-plugins/qutim-indicator:0.3-live ) massmessaging? ( x11-plugins/qutim-massmessaging:0.3-live ) nowplaying? ( x11-plugins/qutim-nowplaying:0.3-live ) phonon? ( x11-plugins/qutim-phonon:0.3-live ) unreadmessageskeeper? ( x11-plugins/qutim-unreadmessageskeeper:0.3-live ) urlpreview? ( x11-plugins/qutim-urlpreview:0.3-live ) weather? ( x11-plugins/qutim-weather:0.3-live ) yandexnarod? ( x11-plugins/qutim-yandexnarod:0.3-live ) sdl? ( x11-plugins/qutim-sdlsound:0.3-live ) kineticpopups? ( x11-plugins/qutim-kineticpopups:0.3-live )
+
+2
+
+compile configure install postinst prepare test unpack
+
+
+
+
+

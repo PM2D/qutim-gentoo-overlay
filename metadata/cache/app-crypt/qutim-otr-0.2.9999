@@ -1,0 +1,22 @@
+net-im/qutim:0.2-live net-libs/libotr >=dev-vcs/git-1.6
+net-im/qutim:0.2-live net-libs/libotr
+0.2-live
+
+debug? ( strip )
+http://www.qutim.org
+GPL-2
+OTR crypto plugin for net-im/qutim
+
+base eutils git multilib portability qt4-r2 toolchain-funcs
+debug
+
+
+
+2
+
+compile configure install prepare unpack
+
+
+
+
+

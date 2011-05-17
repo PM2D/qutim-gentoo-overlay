@@ -1,0 +1,14 @@
+# $Header: $
+# This file contains descriptions of local USE flags, and the ebuilds which
+# contain them.
+
+net-im/qutim:webkit - Enables build of WebKit chat module which can be used with Adium chat themes
+net-im/qutim:kineticpopups - Enables build of kinetic popups plugin (Based on Qt Quick MacOSX (Growl) like popups)
+net-im/qutim:kineticscroller - Enables build of kineticscroller plugin which can be useful for touchscreen devices
+net-im/qutim:unreadmessageskeeper - Enables build of unreadmessageskeeper plugin which keeps unread messages on quit
+net-im/qutim:sdl - Enables build of SDL-based sound engine
+net-im/qutim:phonon - Enables build of Phonon-based sound engine
+net-im/qutim:clconf - Enables build of clconf plugin which adds conferences to the contact list
+net-im/qutim:kde - Enables build of KDE integration plugin
+x11-plugins/qutim-icq:xstatus - Enables support for ICQ xStatus
+x11-plugins/qutim-icq:identify - Enables support for ICQ clients identify

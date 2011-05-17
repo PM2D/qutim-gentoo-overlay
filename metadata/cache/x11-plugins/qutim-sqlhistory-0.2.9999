@@ -1,0 +1,22 @@
+net-im/qutim:0.2-live !x11-plugins/qutim-vsqlhistory !x11-plugins/qutim-webhistory >=dev-vcs/git-1.6
+net-im/qutim:0.2-live
+0.2-live
+
+debug? ( strip )
+http://www.qutim.org
+GPL-2
+SQL storage history plugin for net-im/qutim
+
+base eutils git multilib portability qt4-r2 toolchain-funcs
+debug
+
+
+
+2
+
+compile configure install prepare unpack
+
+
+
+
+
