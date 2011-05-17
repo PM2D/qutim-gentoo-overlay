@@ -30,3 +30,6 @@ x11-plugins/qutim-urlpreview:0.3-live **
 x11-plugins/qutim-vkontakte:0.3-live **
 x11-plugins/qutim-weather:0.3-live **
 x11-plugins/qutim-yandexnarod:0.3-live **
+x11-plugins/qutim-kineticpopups:0.3-live **
+x11-plugins/qutim-astral:0.3-live **
+x11-plugins/qutim-qmlchat:0.3-live **
