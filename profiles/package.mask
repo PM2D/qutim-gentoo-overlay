@@ -28,8 +28,8 @@ x11-plugins/qutim-connectionmanager
 
 # PM2D <m2d@sibnet.ru> (18 May 2011)
 # Plugin doesn't work at the moment
-x11-plugins/qutim-yandexnarod:0.3-live
+=x11-plugins/qutim-yandexnarod-0.3.9999
 
 # PM2D <m2d@sibnet.ru> (18 May 2011)
 # Plugin doesn't work at the moment
-x11-plugins/qutim-urlpreview:0.3-live
+=x11-plugins/qutim-urlpreview-0.3.9999
