@@ -7,7 +7,7 @@ http://www.qutim.org
 GPL-2
 History migration plugin for net-im/qutim
 
-base cmake-utils eutils flag-o-matic git multilib portability qt4-r2 toolchain-funcs
+base cmake-utils eutils flag-o-matic git multilib portability toolchain-funcs
 debug
 
 

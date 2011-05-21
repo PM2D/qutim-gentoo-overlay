@@ -8,10 +8,12 @@ EGIT_HAS_SUBMODULES="true"
 
 inherit git eutils cmake-utils confutils
 
-EGIT_REPO_URI="git://gitorious.org/qutim/protocols.git"
+EGIT_REPO_URI="git://github.com/euroelessar/qutim.git"
 EGIT_BRANCH="master"
 EGIT_COMMIT="${EGIT_BRANCH}"
-EGIT_PROJECT="qutim-protocols"
+EGIT_PROJECT="qutim"
+CMAKE_USE_DIR="${S}/protocols"
+
 DESCRIPTION="Jabber protocol plugin for net-im/qutim"
 HOMEPAGE="http://www.qutim.org"
 

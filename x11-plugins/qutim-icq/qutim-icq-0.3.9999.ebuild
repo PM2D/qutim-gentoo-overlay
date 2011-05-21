@@ -8,10 +8,12 @@ EGIT_HAS_SUBMODULES="true"
 
 inherit git eutils qt4-r2 cmake-utils
 
-EGIT_REPO_URI="git://gitorious.org/qutim/protocols.git"
+EGIT_REPO_URI="git://github.com/euroelessar/qutim.git"
 EGIT_BRANCH="master"
 EGIT_COMMIT="${EGIT_BRANCH}"
-EGIT_PROJECT="qutim-protocols"
+EGIT_PROJECT="qutim"
+CMAKE_USE_DIR="${S}/protocols"
+
 DESCRIPTION="ICQ protocol plugin for net-im/qutim"
 HOMEPAGE="http://www.qutim.org"
 
@@ -27,8 +29,6 @@ DEPEND="${RDEPEND}
 
 RESTRICT="debug? ( strip )"
 
-MY_PN="oscar"
-
 src_unpack() {
 	git_src_unpack
 }
@@ -40,18 +40,12 @@ src_prepare() {
 		CMAKE_BUILD_TYPE="debug"
 	fi
 
-	mycmakeargs=(-DQUTIM_ENABLE_ALL_PLUGINS=off -DOSCAR=on)
-	if use xstatus ; then
-		mycmakeargs+=(-DXSTATUS=on)
-	fi
-	if use identify ; then
-		mycmakeargs+=(-DIDENTIFY=on)
-	fi
+	mycmakeargs=(
+		-DQUTIM_ENABLE_ALL_PLUGINS=off
+		-DOSCAR=on
+		$(cmake-utils_use xstatus XSTATUS)
+		$(cmake-utils_use identify IDENTIFY)
+	)
 
 	CMAKE_IN_SOURCE_BUILD=1
-# 	sed -e "s/QutimPlugin/QutimPlugin-${PV}/" -i CMakeLists.txt
-# 
-# 	for i in $(grep -rl "qutim/" "${S}" | grep -v "\.git"); do
-# 		sed -e "/#include/s/qutim\//qutim-${PV}\//" -i ${i};
-# 	done
 }

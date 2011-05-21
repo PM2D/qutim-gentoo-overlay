@@ -4,12 +4,14 @@
 
 EAPI="2"
 
-inherit git eutils qt4-r2 cmake-utils
+inherit git eutils cmake-utils
 
-EGIT_REPO_URI="git://gitorious.org/qutim/plugins.git"
+EGIT_REPO_URI="git://github.com/euroelessar/qutim.git"
 EGIT_BRANCH="master"
 EGIT_COMMIT="${EGIT_BRANCH}"
-EGIT_PROJECT="qutim-plugins"
+EGIT_PROJECT="qutim"
+CMAKE_USE_DIR="${S}/plugins"
+
 DESCRIPTION="Allows you to save a list of unread messages when qutIM exit"
 HOMEPAGE="http://www.qutim.org"
 
@@ -25,8 +27,6 @@ DEPEND="${RDEPEND}
 
 RESTRICT="debug? ( strip )"
 
-MY_PN=${PN#qutim-}
-
 src_unpack() {
 	git_src_unpack
 }
@@ -37,7 +37,6 @@ src_prepare() {
 		append-flags -O1 -g -ggdb
 		CMAKE_BUILD_TYPE="debug"
 	fi
-	mycmakeargs="-DQUTIM_ENABLE_ALL_PLUGINS=off \
-		-DUNREADMESSAGESKEEPER=on"
+	mycmakeargs="-DQUTIM_ENABLE_ALL_PLUGINS=off -DUNREADMESSAGESKEEPER=on"
 	CMAKE_IN_SOURCE_BUILD=1
 }

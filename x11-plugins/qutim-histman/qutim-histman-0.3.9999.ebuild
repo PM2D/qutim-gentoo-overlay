@@ -4,12 +4,15 @@
 
 EAPI="2"
 
-inherit git eutils qt4-r2 cmake-utils
+inherit git eutils cmake-utils
 
-EGIT_REPO_URI="git://gitorious.org/qutim/plugins.git"
+EGIT_HAS_SUBMODULES="true"
+EGIT_REPO_URI="git://github.com/euroelessar/qutim.git"
 EGIT_BRANCH="master"
 EGIT_COMMIT="${EGIT_BRANCH}"
-EGIT_PROJECT="qutim-plugins"
+EGIT_PROJECT="qutim"
+CMAKE_USE_DIR="${S}/plugins"
+
 DESCRIPTION="History migration plugin for net-im/qutim"
 HOMEPAGE="http://www.qutim.org"
 
@@ -25,9 +28,7 @@ DEPEND="${RDEPEND}
 
 RESTRICT="debug? ( strip )"
 
-MY_PN=${PN#qutim-}
-
-DOCS="${MY_PN}/AUTHORS"
+DOCS="${CMAKE_USE_DIR}/histman/AUTHORS"
 
 src_unpack() {
 	git_src_unpack
@@ -39,12 +40,6 @@ src_prepare() {
 		append-flags -O1 -g -ggdb
 		CMAKE_BUILD_TYPE="debug"
 	fi
-	mycmakeargs="-DQUTIM_ENABLE_ALL_PLUGINS=off \
-		-DHISTMAN=on"
-# 	for i in $(grep -rl "<qutim/" "${S}" | grep -v "\.git"); do
-# 		sed -e "s/<qutim\//<qutim-${PV}\//" -i "${i}";
-# 	done
-# 	sed -e "s/qutim/qutim-${PV}/" \
-# 		-e "s/QutimPlugin/QutimPlugin-${PV}/" -i "${S}/CMakeLists.txt"
+	mycmakeargs="-DQUTIM_ENABLE_ALL_PLUGINS=off -DHISTMAN=on"
 	CMAKE_IN_SOURCE_BUILD=1
 }

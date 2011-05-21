@@ -6,12 +6,15 @@ EAPI="2"
 
 inherit git
 
-EGIT_REPO_URI="git://gitorious.org/qutim/translations.git"
+EGIT_HAS_SUBMODULES="true"
+EGIT_REPO_URI="git://github.com/euroelessar/qutim.git"
 EGIT_BRANCH="master"
 EGIT_COMMIT="${EGIT_BRANCH}"
+EGIT_PROJECT="qutim"
+CMAKE_USE_DIR="${S}/translations"
+
 DESCRIPTION="Localization package for net-im/qutim"
 HOMEPAGE="http://qutim.org"
-#SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0.3-live"
@@ -45,18 +48,17 @@ src_compile() {
 	fi
 	einfo "Compiling translates for ${LANGUAGES}"
 	if [ "x${LANGUAGES}" != "x" ]; then
-		./make.sh compile ${LANGUAGES}
+		${CMAKE_USE_DIR}/make.sh compile ${LANGUAGES}
 	fi
 }
 
 src_install() {
 	if [ "x${LANGUAGES}" != "x" ]; then
-		#LANG_DIR="${D}/usr/share/qutim-${PV}/languages"
 		LANG_DIR="${D}/usr/share/qutim/languages"
 		mkdir -p ${LANG_DIR}
 		for LANG in ${LANGUAGES}; do
 			mkdir -p ${LANG_DIR}/${LANG}
-			cp ${LANG}/binaries/*.qm ${LANG_DIR}/${LANG};
+			cp ${CMAKE_USE_DIR}/${LANG}/binaries/*.qm ${LANG_DIR}/${LANG};
 		done
 	fi
 }

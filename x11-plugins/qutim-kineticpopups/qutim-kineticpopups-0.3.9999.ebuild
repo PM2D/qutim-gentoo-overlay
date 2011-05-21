@@ -4,12 +4,14 @@
 
 EAPI="2"
 
-inherit git eutils qt4-r2 cmake-utils
+inherit git eutils cmake-utils
 
-EGIT_REPO_URI="git://gitorious.org/qutim/plugins.git"
+EGIT_REPO_URI="git://github.com/euroelessar/qutim.git"
 EGIT_BRANCH="master"
 EGIT_COMMIT="${EGIT_BRANCH}"
-EGIT_PROJECT="qutim-plugins"
+EGIT_PROJECT="qutim"
+CMAKE_USE_DIR="${S}/plugins"
+
 DESCRIPTION="Kinetic popups plugin for net-im/qutim"
 HOMEPAGE="http://www.qutim.org"
 
@@ -25,8 +27,6 @@ DEPEND="${RDEPEND}
 	>=x11-libs/qt-declarative-4.7.0"
 
 RESTRICT="debug? ( strip )"
-
-MY_PN=${PN#qutim-}
 
 src_unpack() {
 	git_src_unpack
