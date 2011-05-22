@@ -6,20 +6,12 @@
 		<email></email>
 		<name>qutim overlay team</name>
 	</maintainer>
+	<longdescription lang="en">
+	  Qt4-based Multiprotocol Instant Messenger
+        </longdescription>
 	<use>
-		<flag name="histman">Enable histman plugin</flag>
-		<flag name="imagepub"></flag>
-		<flag name="massmessaging"></flag>
-		<flag name="mrim">Enable mrim plugin</flag>
-		<flag name="otr">Enable encrypted conversations</flag>
-		<flag name="plugman"></flag>
-		<flag name="sqlhistory"></flag>
-		<flag name="tex"></flag>
-		<flag name="urlpreview"></flag>
-		<flag name="vkontakte">Enable vkontakte plugin</flag>
-		<flag name="vsqlhistory"></flag>
-		<flag name="weather"></flag>
-		<flag name="webhistory"></flag>
-		<flag name="yandexnarod">Enable yanderx.narod plugin</flag>
+	  <flag name="webkit">Enables build of WebKit chat module</flag>
+	  <flag name="kineticscroller">Enables build of kinetic popups plugin (Based on Qt Quick MacOSX (Growl) like popups)</flag>
+	  <flag name="mobile">Enables build of mobile-specific modules</flag>
 	</use>
 </pkgmetadata>
