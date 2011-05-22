@@ -4,6 +4,10 @@
 
 *qutim-aescrypto-0.3.9999 (20 Jun 2010)
 
+  22 May 2011; PM2D <m2d@sibnet.ru>
+  qutim-aescrypto-0.3.9999.ebuild:
+  Rewrited for use with new repository
+
   20 Jun 2010; Viktor Lazarev <taurus101v@gmail.com>
   +qutim-aescrypto-0.3.9999.ebuild:
   initial ebuild
