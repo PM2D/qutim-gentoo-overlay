@@ -1,4 +1,4 @@
->=dev-vcs/git-1.6
+dev-vcs/git
 net-im/qutim:0.3-live
 0.3-live
 
@@ -7,14 +7,14 @@ http://qutim.org
 GPL-2
 Localization package for net-im/qutim
 
-eutils git multilib portability toolchain-funcs
+git-2
 linguas_ru linguas_bg linguas_cs linguas_de linguas_uk
 
 
 
 2
 
-compile install postinst prepare unpack
+compile install postinst unpack
 
 
 

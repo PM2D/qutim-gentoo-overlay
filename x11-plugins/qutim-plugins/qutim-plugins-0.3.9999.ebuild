@@ -46,7 +46,7 @@ RESTRICT="debug? ( strip )"
 
 pre_src_unpack() {
 	# Some Bash magick
-	USEARR=$(echo $USE | tr ";" "\n")
+	USEARR=$(echo $USE | tr " " "\n")
 	for ONE_USE in $USEARR
 	do
 	  if (has $ONE_USE $PLUGINS_BAD) ; then
