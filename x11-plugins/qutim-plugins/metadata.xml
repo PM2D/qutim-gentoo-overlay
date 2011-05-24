@@ -20,6 +20,8 @@
 	  <flag name="dbus">Enables build of dbus api plugin</flag>
 	  <flag name="unreadmessageskeeper">Enables build of unreadmessageskeeper plugin which keeps unread messages on quit</flag>
 	  <flag name="kineticpopups">Enables build of kinetic popups plugin (Based on Qt Quick MacOSX (Growl) like popups)</flag>
+	  <flag name="logger">Enables build of simple file based logger for debug</flag>
+	  <flag name="olddelegate">Port of contact list delegate from 0.2</flag>
 	  <flag name="kde">Enables build of KDE integration plugin</flag>
 	  <flag name="sdl">Enables build of SDL-based sound engine (<pkg>media-libs/sdl-mixer</pkg>)</flag>
 	  <flag name="phonon">Enables build of Phonon-based sound engine (<pkg>media-libs/phonon</pkg>)</flag>

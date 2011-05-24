@@ -1,4 +1,4 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -22,7 +22,7 @@ KEYWORDS=""
 
 PLUGINS_GOOD="aescrypto aspell hunspell clconf +dbus +unreadmessageskeeper +kineticpopups kde sdl\
 		phonon histman weather floaties massmessaging emoedit dbusnotify"
-PLUGINS_BAD="antiboss antispam yandexnarod nowplaying connectionmanager awn urlpreview qmlchat indicator"
+PLUGINS_BAD="antiboss antispam yandexnarod nowplaying connectionmanager awn urlpreview qmlchat indicator logger olddelegate"
 
 IUSE="${PLUGINS_GOOD} ${PLUGINS_BAD} debug"
 
@@ -86,8 +86,10 @@ src_prepare() {
 		$(cmake-utils_use kineticpopups KINETICPOPUPS)
 		$(cmake-utils_use kineticpopups QUICKPOPUP/DEFAULT)
 		$(cmake-utils_use kineticpopups QUICKPOPUP/GLASS)
+		$(cmake-utils_use logger LOGGER)
 		$(cmake-utils_use massmessaging MASSMESSAGING)
 		$(cmake-utils_use nowplaying NOWPLAYING)
+		$(cmake-utils_use olddelegate OLDDELEGATE)
 		$(cmake-utils_use phonon PHONONSOUND)
 		$(cmake-utils_use qmlchat QMLCHAT)
 		$(cmake-utils_use sdl SDLSOUND)
