@@ -27,7 +27,7 @@ RDEPEND="net-im/qutim:${SLOT}
 	net-dns/libidn
 	app-crypt/qca
 	app-crypt/qca-cyrus-sasl
-	jabber? ( !app-crypt/qca-ossl )
+	app-crypt/qca-ossl
 	libpurple? ( >=net-im/pidgin-2.6.0 )
 	astral? ( >=net-libs/telepathy-qt4-0.3.0 )"
 
