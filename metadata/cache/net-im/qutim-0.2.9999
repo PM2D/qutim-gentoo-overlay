@@ -1,4 +1,4 @@
->=x11-libs/qt-gui-4.4.0 >=x11-libs/qt-webkit-4.4.0 >=dev-util/cmake-2.6.0 >=dev-vcs/git-1.6 >=dev-util/cmake-2.8.1 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+>=x11-libs/qt-gui-4.4.0 >=x11-libs/qt-webkit-4.4.0 >=dev-util/cmake-2.6.0 >=dev-vcs/git-1.6 >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 >=x11-libs/qt-gui-4.4.0 >=x11-libs/qt-webkit-4.4.0
 0.2-live
 
@@ -7,7 +7,7 @@ http://qutim.org
 GPL-2
 Multiprotocol instant messenger
 
-base cmake-utils confutils eutils flag-o-matic git multilib portability toolchain-funcs
+base cmake-utils confutils eutils flag-o-matic git multilib toolchain-funcs user
 +icq +jabber mrim vkontakte histman +imagepub kde +massmessaging otr plugman sqlhistory tex +urlpreview vsqlhistory weather webhistory +yandexnarod debug linguas_bg linguas_cs linguas_de linguas_ru linguas_uk
 
 linguas_bg? ( net-im/qutim-l10n:0.2-live[linguas_bg?] ) linguas_cs? ( net-im/qutim-l10n:0.2-live[linguas_cs?] ) linguas_de? ( net-im/qutim-l10n:0.2-live[linguas_de?] ) linguas_ru? ( net-im/qutim-l10n:0.2-live[linguas_ru?] ) linguas_uk? ( net-im/qutim-l10n:0.2-live[linguas_uk?] ) icq? ( x11-plugins/qutim-icq:0.2-live ) jabber? ( x11-plugins/qutim-jabber:0.2-live ) mrim? ( x11-plugins/qutim-mrim:0.2-live ) vkontakte? ( x11-plugins/qutim-vkontakte:0.2-live ) histman? ( x11-plugins/qutim-histman:0.2-live ) imagepub? ( x11-plugins/qutim-imagepub:0.2-live ) kde? ( kde-misc/qutim-kdeintegration:0.2-live ) massmessaging? ( x11-plugins/qutim-massmessaging:0.2-live ) otr? ( app-crypt/qutim-otr:0.2-live ) plugman? ( x11-plugins/qutim-plugman:0.2-live ) sqlhistory? ( x11-plugins/qutim-sqlhistory:0.2-live ) tex? ( x11-plugins/qutim-tex:0.2-live ) urlpreview? ( x11-plugins/qutim-urlpreview:0.2-live ) vsqlhistory? ( x11-plugins/qutim-vsqlhistory:0.2-live ) weather? ( x11-plugins/qutim-weather:0.2-live ) webhistory? ( x11-plugins/qutim-webhistory:0.2-live ) yandexnarod? ( x11-plugins/qutim-yandexnarod:0.2-live )

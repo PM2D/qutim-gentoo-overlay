@@ -1,4 +1,4 @@
->=x11-libs/qt-gui-4.6.0 webkit? ( >=x11-libs/qt-webkit-4.6.0 ) >=x11-libs/qt-multimedia-4.6.0 >=dev-util/cmake-2.6.0 doc? ( app-doc/doxygen ) dev-vcs/git >=dev-util/cmake-2.8.1 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+>=x11-libs/qt-gui-4.6.0 webkit? ( >=x11-libs/qt-webkit-4.6.0 ) >=x11-libs/qt-multimedia-4.6.0 >=dev-util/cmake-2.6.0 doc? ( app-doc/doxygen ) dev-vcs/git >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 >=x11-libs/qt-gui-4.6.0 webkit? ( >=x11-libs/qt-webkit-4.6.0 ) >=x11-libs/qt-multimedia-4.6.0
 0.3-live
 
@@ -7,7 +7,7 @@ http://qutim.org
 GPL-2
 Multiprotocol instant messenger
 
-base cmake-utils eutils flag-o-matic git-2 multilib portability toolchain-funcs
+base cmake-utils eutils flag-o-matic git-2 multilib toolchain-funcs user
 webkit kineticscroller static mobile debug doc linguas_bg linguas_cs linguas_de linguas_ru linguas_uk
 
 linguas_bg? ( net-im/qutim-l10n:0.3-live[linguas_bg?] ) linguas_cs? ( net-im/qutim-l10n:0.3-live[linguas_cs?] ) linguas_de? ( net-im/qutim-l10n:0.3-live[linguas_de?] ) linguas_ru? ( net-im/qutim-l10n:0.3-live[linguas_ru?] ) linguas_uk? ( net-im/qutim-l10n:0.3-live[linguas_uk?] ) x11-plugins/qutim-protocols:0.3-live x11-plugins/qutim-plugins:0.3-live

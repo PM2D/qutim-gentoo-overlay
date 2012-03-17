@@ -7,7 +7,7 @@ http://qutim.org
 GPL-2
 Localization package for net-im/qutim
 
-eutils git multilib portability toolchain-funcs
+eutils git multilib toolchain-funcs user
 linguas_ru linguas_bg linguas_cs linguas_de linguas_uk
 
 

@@ -7,7 +7,7 @@ http://www.qutim.org
 GPL-2
 OTR crypto plugin for net-im/qutim
 
-base eutils git multilib portability qt4-r2 toolchain-funcs
+base eutils git multilib qt4-r2 toolchain-funcs user
 debug
 
 
