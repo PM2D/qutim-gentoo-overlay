@@ -8,7 +8,7 @@ GPL-2
 Plugins for net-im/qutim
 
 base cmake-utils eutils flag-o-matic git-2 multilib toolchain-funcs user
-aescrypto aspell hunspell clconf +dbus +unreadmessageskeeper +kineticpopups kde sdl phonon histman weather floaties massmessaging emoedit dbusnotify antiboss antispam yandexnarod nowplaying connectionmanager awn urlpreview qmlchat indicator logger olddelegate debug
+aescrypto aspell hunspell clconf +dbus +unreadmessageskeeper +kineticpopups kde sdl phonon histman weather floaties massmessaging emoedit dbusnotify nowplaying antiboss antispam yandexnarod connectionmanager awn urlpreview qmlchat indicator logger olddelegate debug
 
 
 

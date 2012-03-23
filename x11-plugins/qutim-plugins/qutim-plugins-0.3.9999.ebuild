@@ -21,8 +21,8 @@ SLOT="0.3-live"
 KEYWORDS=""
 
 PLUGINS_GOOD="aescrypto aspell hunspell clconf +dbus +unreadmessageskeeper +kineticpopups kde sdl\
-		phonon histman weather floaties massmessaging emoedit dbusnotify"
-PLUGINS_BAD="antiboss antispam yandexnarod nowplaying connectionmanager awn urlpreview qmlchat indicator logger olddelegate"
+		phonon histman weather floaties massmessaging emoedit dbusnotify nowplaying"
+PLUGINS_BAD="antiboss antispam yandexnarod connectionmanager awn urlpreview qmlchat indicator logger olddelegate"
 
 IUSE="${PLUGINS_GOOD} ${PLUGINS_BAD} debug"
 
@@ -45,7 +45,7 @@ DEPEND="${RDEPEND}
 RESTRICT="debug? ( strip )"
 
 pre_src_unpack() {
-	# Some Bash magick
+	# Some Bash magic
 	USEARR=$(echo $USE | tr " " "\n")
 	for ONE_USE in $USEARR
 	do
