@@ -20,9 +20,9 @@ LICENSE="GPL-2"
 SLOT="0.3-live"
 KEYWORDS=""
 
-PLUGINS_GOOD="aescrypto aspell hunspell clconf +dbus +unreadmessageskeeper +kineticpopups kde sdl\
-		phonon histman weather floaties massmessaging emoedit dbusnotify nowplaying"
-PLUGINS_BAD="antiboss antispam yandexnarod connectionmanager awn urlpreview qmlchat indicator logger olddelegate"
+PLUGINS_GOOD="aescrypto antispam aspell hunspell clconf +dbus +unreadmessageskeeper +kineticpopups kde sdl phonon histman weather \
+floaties massmessaging emoedit dbusnotify nowplaying urlpreview connectionmanager updater blogimprover highlighter"
+PLUGINS_BAD="antiboss awn qmlchat indicator logger olddelegate yandexnarod"
 
 IUSE="${PLUGINS_GOOD} ${PLUGINS_BAD} debug"
 
@@ -68,17 +68,20 @@ src_prepare() {
 
 	mycmakeargs=(
 		-DQUTIM_ENABLE_ALL_PLUGINS=off
+		-DLINUXINTEGRATION=on
 		$(cmake-utils_use aescrypto AESCRYPTO)
 		$(cmake-utils_use antiboss ANTIBOSS)
 		$(cmake-utils_use antispam ANTISPAM)
 		$(cmake-utils_use aspell ASPELLER)
 		$(cmake-utils_use awn AWN)
+		$(cmake-utils_use blogimprover BLOGIMPROVER)
 		$(cmake-utils_use clconf CLCONF)
 		$(cmake-utils_use connectionmanager CONNECTIONMANAGER)
 		$(cmake-utils_use dbus DBUSAPI)
 		$(cmake-utils_use dbusnotify DBUSNOTIFICATIONS)
 		$(cmake-utils_use emoedit EMOEDIT)
 		$(cmake-utils_use floaties FLOATIES)
+		$(cmake-utils_use highlighter HIGHLIGHTER)
 		$(cmake-utils_use histman HISTMAN)
 		$(cmake-utils_use hunspell HUNSPELLER)
 		$(cmake-utils_use indicator INDICATOR)
@@ -94,6 +97,7 @@ src_prepare() {
 		$(cmake-utils_use qmlchat QMLCHAT)
 		$(cmake-utils_use sdl SDLSOUND)
 		$(cmake-utils_use unreadmessageskeeper UNREADMESSAGESKEEPER)
+		$(cmake-utils_use updater UPDATER)
 		$(cmake-utils_use urlpreview URLPREVIEW)
 		$(cmake-utils_use weather WEATHER)
 		$(cmake-utils_use yandexnarod YANDEXNAROD)
