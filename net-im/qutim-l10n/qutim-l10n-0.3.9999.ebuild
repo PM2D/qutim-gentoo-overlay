@@ -4,7 +4,7 @@
 
 EAPI="2"
 
-inherit git-2
+inherit git-2 cmake-utils
 
 EGIT_HAS_SUBMODULES="true"
 EGIT_REPO_URI="git://github.com/euroelessar/qutim.git"
@@ -19,7 +19,7 @@ HOMEPAGE="http://qutim.org"
 LICENSE="GPL-2"
 SLOT="0.3-live"
 KEYWORDS=""
-IUSE="linguas_ru linguas_bg linguas_cs linguas_de linguas_uk"
+IUSE="linguas_ru linguas_bg linguas_cs linguas_de linguas_uk linguas_sk"
 LANGUAGES=""
 
 DEPEND=""
@@ -30,37 +30,18 @@ src_unpack() {
 	git-2_src_unpack
 }
 
-src_compile() {
-	if use linguas_ru ; then
-		LANGUAGES="${LANGUAGES} ru_RU"
-	fi
-	if use linguas_bg ; then
-		LANGUAGES="${LANGUAGES} bg_BG"
-	fi
-	if use linguas_cs ; then
-		LANGUAGES="${LANGUAGES} cs_CZ"
-	fi
-	if use linguas_de ; then
-		LANGUAGES="${LANGUAGES} de_DE"
-	fi
-	if use linguas_uk ; then
-		LANGUAGES="${LANGUAGES} uk_UA"
-	fi
-	einfo "Compiling translates for ${LANGUAGES}"
-	if [ "x${LANGUAGES}" != "x" ]; then
-		${CMAKE_USE_DIR}/make.sh compile ${LANGUAGES}
-	fi
-}
+src_prepare() {
+	CMAKE_IN_SOURCE_BUILD=1
+	mycmakeargs=(
+		-DQUTIM_ENABLE_ALL_PLUGINS=off
+		$(cmake-utils_use linguas_ru LANGUAGES/RU)
+		$(cmake-utils_use linguas_bg LANGUAGES/BG)
+		$(cmake-utils_use linguas_cs LANGUAGES/CS)
+		$(cmake-utils_use linguas_de LANGUAGES/DE)
+		$(cmake-utils_use linguas_uk LANGUAGES/UK)
+		$(cmake-utils_use linguas_sk LANGUAGES/SK)
+	)
 
-src_install() {
-	if [ "x${LANGUAGES}" != "x" ]; then
-		LANG_DIR="${D}/usr/share/qutim/languages"
-		mkdir -p ${LANG_DIR}
-		for LANG in ${LANGUAGES}; do
-			mkdir -p ${LANG_DIR}/${LANG}
-			cp ${CMAKE_USE_DIR}/${LANG}/binaries/*.qm ${LANG_DIR}/${LANG};
-		done
-	fi
 }
 
 pkg_postinst() {

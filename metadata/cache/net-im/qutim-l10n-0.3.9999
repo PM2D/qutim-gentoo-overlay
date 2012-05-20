@@ -1,4 +1,4 @@
-dev-vcs/git
+dev-vcs/git >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 net-im/qutim:0.3-live
 0.3-live
 
@@ -7,14 +7,14 @@ http://qutim.org
 GPL-2
 Localization package for net-im/qutim
 
-git-2
-linguas_ru linguas_bg linguas_cs linguas_de linguas_uk
+base cmake-utils eutils flag-o-matic git-2 multilib toolchain-funcs user
+linguas_ru linguas_bg linguas_cs linguas_de linguas_uk linguas_sk
 
 
 
 2
 
-compile install postinst unpack
+compile configure install postinst prepare test unpack
 
 
 
